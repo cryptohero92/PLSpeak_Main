@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:frontend": "yarn workspace frontend start",
+    "start:backend": "yarn workspace backend start",
+    "compile:smart": "yarn workspace smart compile",
+    "test:smart": "yarn workspace smart test",
+    "deploy:smart": "yarn workspace smart deploy",
+    "start:all": "yarn start:frontend & yarn start:backend "
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^7.2.0"
+  }
+}

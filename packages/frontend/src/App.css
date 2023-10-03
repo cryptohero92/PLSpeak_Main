@@ -1,0 +1,37 @@
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.title-style {
+  /* font-family: "Poppins", sans-serif; */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 11px;
+  /* margin-bottom: 1rem !important; */
+}
+
+.text-style {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  /* line-height: 21px; */
+  font-weight: 600;
+}
+
+ .sub-header {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9FA2AF;
+}
