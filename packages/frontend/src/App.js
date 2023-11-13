@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-// import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { ToastContainer } from 'react-toastify';
 import { CookiesProvider } from 'react-cookie';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from "react-redux";
@@ -12,41 +10,8 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import Routes from './Routes/index';
 import './App.css';
-import Header from './Component/Header';
-import Connect from './Component/Login';
-import { History } from './Component/TradeHistory';
 
 function App() {
-  // const [theme, setTheme] = useState('light');
-
-  // const toggleTheme = () => {
-  //   setTheme(theme === 'light' ? 'dark' : 'light');
-  // };
-
-  // const lightTheme = createTheme({
-  //   palette: {
-  //     mode: 'light',
-  //   },
-  // });
-
-  // const darkTheme = createTheme({
-  //   palette: {
-  //     mode: 'dark',
-  //   },
-  // });
-
-
-  // const dispatch = useDispatch();
-  // const [mode, setMode] = React.useState("dark");
-  // const colorMode = React.useMemo(
-  //   () => ({
-  //     toggleColorMode: () => {
-  //       setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-  //     },
-  //   }),
-  //   []
-  // );
-
   const dispatch = useDispatch();
   const [mode, setMode] = React.useState("dark");
   const colorMode = React.useMemo(
@@ -102,18 +67,15 @@ function App() {
   }, [mode]);
 
   return (
-    <>
-     <ColorModeContext.Provider value={colorMode}>
+    <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme} >
         <CookiesProvider>
           <BrowserRouter>
-            {/* <Header toggleTheme={toggleTheme} /> */}
             <Routes />
           </BrowserRouter>
         </CookiesProvider>
       </ThemeProvider>
-      </ColorModeContext.Provider>
-    </>
+    </ColorModeContext.Provider>
   );
 }
 

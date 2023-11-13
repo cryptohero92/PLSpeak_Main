@@ -16,15 +16,6 @@ const ChattRouter = require('./routes/chat')
 const fs = require("fs");
 
 
-
-// const MatchesRouter = require('./routes/matches')
-// const PlayersRouter = require('./routes/players')
-// const RewardsRouter = require('./routes/rewards')
-// const AdminRouter = require('./routes/admin')
-// const CoinRouter = require('./routes/currency')
-// const TransactionsRouter = require('./routes/transactions')
-
-
 const parseResponse = require('./middlewares/parseResponse');
 
 const validateJwtToken = require('./middlewares/auth')
