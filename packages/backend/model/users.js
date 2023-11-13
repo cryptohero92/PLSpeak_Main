@@ -16,6 +16,10 @@ const UsersSchema = new Schema(
       required: [true, "Account must be provided"],
       trim: true,
     },
+    privilege: {
+      type: Number,
+      default: 0 // general
+    },
     profile: {
       type: Object,
       default: null,
