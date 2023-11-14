@@ -24,14 +24,23 @@ const EventSchema = new Schema(
     },
     category: { 
       type: Schema.Types.ObjectId, 
-      ref: "Category" 
+      required: true
+    },
+    endDate: {
+      type: Schema.Types.Date,
+      required: true,
+      min: Date.now
     },
     bettingOptions: [
       {
-        positive: {
+        title: {
+          required: [true, "betting title must be provided"],
+          type: String
+        },
+        yes: {
           type: String,
         },
-        negative: {
+        no: {
           type: String
         }
       }
