@@ -217,7 +217,8 @@ const insertSeeds = async () => {
                     {
                         title: '1.18+'
                     }
-                ]
+                ],
+                status: -1
             },
             {
                 title: 'Will ETH hit $2,500 by EOY?',
@@ -230,7 +231,8 @@ const insertSeeds = async () => {
                 Please note that this market is about the price according to Coinbase ETH-USD, not according to other sources or spot markets.`,
                 image: `https://polymarket.com/_next/image?url=https%3A%2F%2Fpolymarket-upload.s3.us-east-2.amazonaws.com%2Fwill-eth-h_f160175896785659eb445b920ff6ea54_256x256_qual_100.webp&w=96&q=100`,
                 category: 'Prices',
-                endDate: new Date('2023-12-31')
+                endDate: new Date('2023-12-31'),
+                status: -1
             },
             {
                 title: 'Argentina Presidential Election: Who will win?',
@@ -254,8 +256,37 @@ const insertSeeds = async () => {
                     {
                         title: 'Patricia Bullrich'
                     }
-                ]
+                ],
+                status: -1
             },
+            {
+                title: 'NBA: February 13th',
+                detail: `In the upcoming NBA game, scheduled for February 13:
+
+                If the Minnesota Timberwolves win by over 6.5 points, the market will resolve to “Yes”.
+                
+                If the Indiana Pacers lose by less than 6.5 points or win, the market will resolve “No.”
+                
+                If the game is not completed by February 20 2022 (11:59:59 PM ET), the market will resolve 50-50.`,
+                image: `https://polymarket.com/_next/image?url=https%3A%2F%2Fpolymarket-upload.s3.us-east-2.amazonaws.com%2FLeBron-James-Lakers-Hero.png&w=96&q=100`,
+                category: 'Basketball',
+                endDate: new Date('2023-02-13'),
+                bettingOptions: [
+                    {
+                        title: 'Who will win: Celtics vs Hawks'
+                    },
+                    {
+                        title: 'Who will win: Timberwolves vs Pacers'
+                    },
+                    {
+                        title: 'Celtics(-6.5) vs Pacers'
+                    },
+                    {
+                        title: 'Timberwolves(-6.5) vs Pacers'
+                    }
+                ],
+                status: 0
+            }
         ];
 
         for (const event of events) {

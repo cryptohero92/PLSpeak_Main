@@ -28,8 +28,7 @@ const EventSchema = new Schema(
     },
     endDate: {
       type: Schema.Types.Date,
-      required: true,
-      min: Date.now
+      required: true
     },
     bettingOptions: [
       {
@@ -44,7 +43,11 @@ const EventSchema = new Schema(
           type: String
         }
       }
-    ]
+    ],
+    status: {
+      type: Number,
+      default: -2
+    }
   },
   { timestamps: true }
 );
