@@ -232,6 +232,30 @@ const insertSeeds = async () => {
                 category: 'Prices',
                 endDate: new Date('2023-12-31')
             },
+            {
+                title: 'Argentina Presidential Election: Who will win?',
+                detail: `Javier Gerardo Milei is seeking election to the presidency in the 2023 Argentine general election, currently scheduled to take place on October 22, 2023.
+
+                This market will resolve to "Yes" if Javier Milei wins the 2023 Argentine presidential election. Otherwise, this market will resolve to "No".
+                
+                This market includes any potential second round. If the result of this election isn't known by June 30, 2024, 11:59:59 PM ET, the market will resolve to 50-50.
+                
+                The primary resolution source for this market will be official information from the Argentine government (e.g. https://www.argentina.gob.ar/interior/dine), however a consensus of credible reporting will also suffice.`,
+                image: `https://polymarket.com/_next/image?url=https%3A%2F%2Fpolymarket-upload.s3.us-east-2.amazonaws.com%2Fargentina-_c4936ff35bfdf7005e6a97197202292c_256x256_qual_100.webp&w=96&q=100`,
+                category: 'Elections',
+                endDate: new Date('2023-11-19'),
+                bettingOptions: [
+                    {
+                        title: 'Javier Milei'
+                    },
+                    {
+                        title: 'Sergio Massa'
+                    },
+                    {
+                        title: 'Patricia Bullrich'
+                    }
+                ]
+            },
         ];
 
         for (const event of events) {
