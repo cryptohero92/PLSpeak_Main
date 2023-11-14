@@ -10,7 +10,7 @@ import { ethers } from 'ethers';
 const Connect = () => {
 
     const [address, setAddress] = useState('');
-   console.log("address------>>>>>>>>",address)
+    console.log("address------>>>>>>>>",address)
     const connectWallet = async () => {
         if (window.ethereum) {
             try {
