@@ -2,6 +2,7 @@ import React from 'react';
 
 const Home = React.lazy(() => import('../Page/Home'));
 const Detail = React.lazy(() => import('../Page/Detail'))
+const Markets = React.lazy(() => import('../Page/Markets'))
 // const Login = React.lazy(() => import('../pages/Login/login'));
 // const Signup =React.lazy(()=>import('../pages/sign up/signup'))
 
@@ -20,8 +21,14 @@ const routes = [
     element:Detail,
     isAuthenticated: false,
     isCommon: true
+  },
+  {
+    path:'/markets',
+    exact:false,
+    element:Markets,
+    isAuthenticated: false,
+    isCommon: true
   }
-  
 
 ]
 

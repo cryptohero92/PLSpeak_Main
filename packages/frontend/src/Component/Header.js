@@ -113,6 +113,11 @@ const Header = () => {
     setAnchorElNav(null);
   };
 
+  const handleMarketsClick = () => {
+    handleClose();
+    navigate("/markets");
+  }
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -462,7 +467,7 @@ const Header = () => {
                       fontStyle: "normal",
                       fontFamily: "'Poppins', sans-serif",
                     }}
-                    onClick={handleClose}
+                    onClick={handleMarketsClick}
                   >
                     All Markets
                   </MenuItem>
