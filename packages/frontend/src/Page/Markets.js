@@ -6,7 +6,7 @@ import { Market } from '../Component/Market'
 const Markets = () => {
 	const theme = useTheme();
 	return (
-		<Box sx={{ bgcolor: theme.palette.mode === 'dark' ? '#1c2033' : '#E5E5E5' }}>
+		<Box sx={{ bgcolor: theme.palette.mode === 'dark' ? '#1c2033' : '#E5E5E5', color: theme.palette.mode === "dark" ? "#fff" : "#000"}}>
 			<Header />
 			<Market />
 		</Box>
